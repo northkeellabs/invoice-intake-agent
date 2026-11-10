@@ -1,0 +1,14 @@
+data/
+inbox/
+out/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+# local launcher and Claude Code settings (contain local paths)
+launch-claude.ps1
+.claude/
+# build report for the owner (local notes)
+REPORT.md
