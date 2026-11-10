@@ -1,0 +1,12 @@
+{
+ "file": "28-letter-fernway.pdf",
+ "fictional": true,
+ "layout": "letter",
+ "medium": "text_pdf",
+ "scenario": "other",
+ "expected_type": "other",
+ "expected_flags": [
+  "not_a_bill"
+ ],
+ "expected_route": "review"
+}

@@ -1,0 +1,27 @@
+{
+ "file": "cal-04-invoice.pdf",
+ "fictional": true,
+ "layout": "L4",
+ "medium": "text_pdf",
+ "scenario": "clean",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Sunnyfold Utilities (Demo) Ltd",
+  "supplier_vat_number": "GB 278 4776 37",
+  "document_number": "SFU-4712",
+  "issue_date": "2026-11-05",
+  "due_date": "2026-11-19",
+  "currency": "GBP",
+  "net_total": "245.80",
+  "vat_total": "49.16",
+  "gross_total": "294.96",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-52",
+  "bank_account_number": "00007260",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "6100",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

@@ -1,0 +1,27 @@
+{
+ "file": "20-receipt-msh.png",
+ "fictional": true,
+ "layout": "receipt",
+ "medium": "receipt_image",
+ "scenario": "receipt",
+ "expected_type": "receipt",
+ "expected_fields": {
+  "supplier_name": "Market Street Hardware (Demo)",
+  "supplier_vat_number": "GB 132 4370 01",
+  "document_number": "MSH5929",
+  "issue_date": "2026-09-27",
+  "due_date": null,
+  "currency": "GBP",
+  "net_total": "50.95",
+  "vat_total": "10.19",
+  "gross_total": "61.14",
+  "original_invoice_number": null,
+  "bank_sort_code": null,
+  "bank_account_number": null,
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "7100",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

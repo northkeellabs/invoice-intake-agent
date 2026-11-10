@@ -1,0 +1,27 @@
+{
+ "file": "cal-02-invoice.pdf",
+ "fictional": true,
+ "layout": "L2",
+ "medium": "text_pdf",
+ "scenario": "clean",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Wrenfield Dairy (Demo)",
+  "supplier_vat_number": "GB 408 7560 22",
+  "document_number": "WFD-4182",
+  "issue_date": "2026-10-07",
+  "due_date": "2026-10-21",
+  "currency": "GBP",
+  "net_total": "129.45",
+  "vat_total": "0.00",
+  "gross_total": "129.45",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-62",
+  "bank_account_number": "00004000",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "5000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

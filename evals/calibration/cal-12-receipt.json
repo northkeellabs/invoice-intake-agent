@@ -1,0 +1,27 @@
+{
+ "file": "cal-12-receipt.png",
+ "fictional": true,
+ "layout": "receipt",
+ "medium": "receipt_image",
+ "scenario": "receipt",
+ "expected_type": "receipt",
+ "expected_fields": {
+  "supplier_name": "Stationers Row (Demo)",
+  "supplier_vat_number": "GB 104 3321 81",
+  "document_number": "SR5151",
+  "issue_date": "2026-10-31",
+  "due_date": null,
+  "currency": "GBP",
+  "net_total": "17.54",
+  "vat_total": "3.51",
+  "gross_total": "21.05",
+  "original_invoice_number": null,
+  "bank_sort_code": null,
+  "bank_account_number": null,
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "7000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

@@ -1,0 +1,27 @@
+{
+ "file": "04-invoice-lanternfield.pdf",
+ "fictional": true,
+ "layout": "L4",
+ "medium": "text_pdf",
+ "scenario": "clean",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Lanternfield Energy (Demo) Ltd",
+  "supplier_vat_number": "GB 198 3444 17",
+  "document_number": "LFE-3592",
+  "issue_date": "2026-11-04",
+  "due_date": "2026-12-04",
+  "currency": "GBP",
+  "net_total": "532.22",
+  "vat_total": "106.45",
+  "gross_total": "638.67",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-48",
+  "bank_account_number": "00008645",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "6100",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

@@ -1,0 +1,27 @@
+{
+ "file": "25-credit-note-saltmarsh.pdf",
+ "fictional": true,
+ "layout": "L4",
+ "medium": "text_pdf",
+ "scenario": "credit_note",
+ "expected_type": "credit_note",
+ "expected_fields": {
+  "supplier_name": "Saltmarsh Printworks (Demo)",
+  "supplier_vat_number": "GB 217 5337 72",
+  "document_number": "SPW-3724",
+  "issue_date": "2026-10-13",
+  "due_date": null,
+  "currency": "GBP",
+  "net_total": "123.90",
+  "vat_total": "24.78",
+  "gross_total": "148.68",
+  "original_invoice_number": "SPW-3695",
+  "bank_sort_code": null,
+  "bank_account_number": null,
+  "bank_iban": null,
+  "line_count": 1
+ },
+ "expected_account_code": "6800",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

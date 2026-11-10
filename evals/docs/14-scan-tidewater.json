@@ -1,0 +1,27 @@
+{
+ "file": "14-scan-tidewater.pdf",
+ "fictional": true,
+ "layout": "L1",
+ "medium": "scan_pdf",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Tidewater Packaging (Demo) Ltd",
+  "supplier_vat_number": "GB 442 3232 21",
+  "document_number": "TWP-3305",
+  "issue_date": "2026-10-11",
+  "due_date": "2026-10-25",
+  "currency": "GBP",
+  "net_total": "401.85",
+  "vat_total": "80.37",
+  "gross_total": "482.22",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-78",
+  "bank_account_number": "00004504",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "5100",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

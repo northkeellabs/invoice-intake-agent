@@ -1,0 +1,27 @@
+{
+ "file": "07-invoice-pebblecourt.pdf",
+ "fictional": true,
+ "layout": "L7",
+ "medium": "text_pdf",
+ "scenario": "clean",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Pebblecourt Telecom (Demo) Ltd",
+  "supplier_vat_number": "GB 864 5428 41",
+  "document_number": "PCT-6282",
+  "issue_date": "2026-10-21",
+  "due_date": "2026-11-20",
+  "currency": "GBP",
+  "net_total": "66.08",
+  "vat_total": "13.22",
+  "gross_total": "79.30",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-13",
+  "bank_account_number": "00005078",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "6400",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

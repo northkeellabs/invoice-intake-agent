@@ -1,0 +1,30 @@
+{
+ "file": "27-statement-copperkettle.pdf",
+ "fictional": true,
+ "layout": "statement",
+ "medium": "text_pdf",
+ "scenario": "statement",
+ "expected_type": "statement",
+ "expected_flags": [
+  "not_a_bill"
+ ],
+ "expected_route": "review",
+ "supplier_name": "Copperkettle Dairy (Demo) Ltd",
+ "statement_lines": [
+  {
+   "document_number": "CKD-4609",
+   "amount": "335.30"
+  },
+  {
+   "document_number": "CKD-4616",
+   "amount": "378.30"
+  },
+  {
+   "document_number": "CKD-4649",
+   "amount": "420.57"
+  }
+ ],
+ "missing_documents": [
+  "CKD-4649"
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "file": "15-scan-larkspur.jpg",
+ "fictional": true,
+ "layout": "L2",
+ "medium": "scan_jpg",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Larkspur Software (Demo) Ltd",
+  "supplier_vat_number": "GB 410 9466 85",
+  "document_number": "LSW-1224",
+  "issue_date": "2026-10-15",
+  "due_date": "2026-11-14",
+  "currency": "GBP",
+  "net_total": "64.52",
+  "vat_total": "12.90",
+  "gross_total": "77.42",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-26",
+  "bank_account_number": "00004145",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "6500",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

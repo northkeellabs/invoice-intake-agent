@@ -1,0 +1,18 @@
+{
+ "ocr": {
+  "threshold": 0.9114,
+  "method": "groups overlap: cut with best balanced accuracy (83%), ties to the highest cut",
+  "calibrated": "2026-11-10",
+  "documents": 12,
+  "correct": 9,
+  "model": "qwen3:8b"
+ },
+ "vision": {
+  "threshold": 0.9714,
+  "method": "groups overlap: cut with best balanced accuracy (89%), ties to the highest cut",
+  "calibrated": "2026-11-10",
+  "documents": 12,
+  "correct": 9,
+  "model": "qwen3-vl:8b"
+ }
+}

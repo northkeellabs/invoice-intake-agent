@@ -1,0 +1,51 @@
+[project]
+name = "invoice-intake-agent"
+version = "0.1.0"
+description = "Local document-intake agent for bookkeeping: extract supplier invoices, receipts, credit notes and statements, check them in code, code to your chart of accounts, human review queue, accounting-import CSV, statement reconciliation, CRM log via MCP. Runs free on local Ollama."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12,<3.13"
+authors = [{ name = "Northkeel Labs" }]
+dependencies = [
+    "langgraph==1.2.20",
+    "langgraph-checkpoint-sqlite==3.1.3",
+    "langchain-core==1.7.7",
+    "langchain-ollama==1.1.0",
+    "langchain-mcp-adapters==0.3.2",
+    "mcp==1.30.0",
+    "fastapi==0.162.2",
+    "uvicorn==0.54.0",
+    "httpx==0.28.1",
+    "pydantic==2.14.3",
+    "jinja2==3.1.6",
+    "python-multipart==0.0.33",
+    "pyyaml==6.0.3",
+    "pypdf==7.0.0",
+    "pypdfium2==5.15.2",
+    "pillow==13.0.0",
+    "numpy==2.5.4",
+    "rapidocr==3.10.0",
+    "onnxruntime==1.31.1",
+]
+
+[project.optional-dependencies]
+anthropic = ["langchain-anthropic==1.7.10"]
+openai = ["langchain-openai==1.7.4"]
+
+[dependency-groups]
+dev = ["pytest==9.2.0", "pytest-asyncio==1.4.1.post1", "reportlab==5.1.0"]
+
+[project.scripts]
+intake = "invoice_intake.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/invoice_intake"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]

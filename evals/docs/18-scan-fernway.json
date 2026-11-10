@@ -1,0 +1,27 @@
+{
+ "file": "18-scan-fernway.pdf",
+ "fictional": true,
+ "layout": "L7",
+ "medium": "scan_pdf",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Fernway Couriers (Demo) Ltd",
+  "supplier_vat_number": "GB 241 5920 66",
+  "document_number": "FWC-4397",
+  "issue_date": "2026-10-08",
+  "due_date": "2026-10-22",
+  "currency": "GBP",
+  "net_total": "74.64",
+  "vat_total": "14.93",
+  "gross_total": "89.57",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-19",
+  "bank_account_number": "00002691",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "7300",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

@@ -1,0 +1,27 @@
+{
+ "file": "24-credit-note-tidewater.pdf",
+ "fictional": true,
+ "layout": "L2",
+ "medium": "text_pdf",
+ "scenario": "credit_note",
+ "expected_type": "credit_note",
+ "expected_fields": {
+  "supplier_name": "Tidewater Packaging (Demo) Ltd",
+  "supplier_vat_number": "GB 442 3232 21",
+  "document_number": "TWP-3340",
+  "issue_date": "2026-11-09",
+  "due_date": null,
+  "currency": "GBP",
+  "net_total": "34.13",
+  "vat_total": "6.83",
+  "gross_total": "40.96",
+  "original_invoice_number": "TWP-3299",
+  "bank_sort_code": null,
+  "bank_account_number": null,
+  "bank_iban": null,
+  "line_count": 1
+ },
+ "expected_account_code": "5100",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

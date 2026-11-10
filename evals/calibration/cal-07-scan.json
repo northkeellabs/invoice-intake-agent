@@ -1,0 +1,27 @@
+{
+ "file": "cal-07-scan.jpg",
+ "fictional": true,
+ "layout": "L2",
+ "medium": "scan_jpg",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Ambervale Flour (Demo) Ltd",
+  "supplier_vat_number": "GB 388 2338 46",
+  "document_number": "AVF-4203",
+  "issue_date": "2026-10-18",
+  "due_date": "2026-11-01",
+  "currency": "GBP",
+  "net_total": "112.70",
+  "vat_total": "0.00",
+  "gross_total": "112.70",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-80",
+  "bank_account_number": "00008595",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "5000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

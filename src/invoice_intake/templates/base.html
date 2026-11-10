@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Review queue{% endblock %} - invoice-intake-agent</title>
+<style>
+  :root { --ink:#1d2330; --muted:#5d6675; --line:#dfe3ea; --bg:#f6f7f9; --card:#fff; --accent:#1f5fbf;
+          --warn:#a15c00; --warn-bg:#fff4e0; --bad:#a3262a; --bad-bg:#fdecec; --ok:#1d7a46; --ok-bg:#e8f6ee; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:#16202e; color:#fff; padding:10px 20px; display:flex; gap:16px; align-items:baseline; }
+  header a { color:#fff; text-decoration:none; font-weight:600; }
+  header .demo { margin-left:auto; font-size:12px; color:#c9d2df; }
+  main { padding:16px 20px; }
+  table { border-collapse:collapse; width:100%; background:var(--card); border:1px solid var(--line); }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:#eef1f5; font-weight:600; font-size:13px; }
+  a { color:var(--accent); }
+  .pill { display:inline-block; padding:1px 8px; border-radius:10px; font-size:12px; font-weight:600; white-space:nowrap; }
+  .st-review { background:var(--warn-bg); color:var(--warn); }
+  .st-auto_eligible { background:#e7f0fd; color:var(--accent); }
+  .st-approved { background:var(--ok-bg); color:var(--ok); }
+  .st-rejected, .st-invalid { background:var(--bad-bg); color:var(--bad); }
+  .flag { background:var(--warn-bg); border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0; }
+  .flag.bad { background:var(--bad-bg); border-left-color:var(--bad); }
+  .flag b { display:block; }
+  .muted { color:var(--muted); }
+  .cols { display:grid; grid-template-columns: minmax(380px, 1.1fr) minmax(360px, 1fr); gap:18px; }
+  .page img { width:100%; border:1px solid var(--line); background:#fff; }
+  .card { background:var(--card); border:1px solid var(--line); padding:12px 14px; margin-bottom:14px; }
+  label { display:block; font-size:12px; color:var(--muted); margin-top:6px; }
+  input[type=text], select { width:100%; padding:5px 7px; border:1px solid #c5ccd6; border-radius:4px; font:inherit; }
+  input.nf { border-color:var(--warn); background:var(--warn-bg); }
+  .btns { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+  button { padding:7px 14px; border-radius:4px; border:1px solid #9aa4b2; background:#fff; font:inherit; cursor:pointer; }
+  button.primary { background:var(--ok); border-color:var(--ok); color:#fff; }
+  button.danger { background:#fff; border-color:var(--bad); color:var(--bad); }
+  .error { background:var(--bad-bg); color:var(--bad); padding:8px 10px; margin-bottom:10px; }
+  .filters { margin-bottom:10px; display:flex; gap:8px; align-items:center; }
+  .filters select { width:auto; }
+  .small { font-size:12px; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header><a href="/review">invoice-intake-agent</a><span>Review queue</span><span class="demo">DEMO - all documents are fictional - local only (127.0.0.1)</span></header>
+<main>{% block body %}{% endblock %}</main>
+</body>
+</html>

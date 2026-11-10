@@ -1,0 +1,27 @@
+{
+ "file": "13-scan-brackenfold.jpg",
+ "fictional": true,
+ "layout": "L5",
+ "medium": "scan_jpg",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Brackenfold Mills (Demo) Ltd",
+  "supplier_vat_number": "GB 787 7893 28",
+  "document_number": "BFM-5445",
+  "issue_date": "2026-11-06",
+  "due_date": "2026-12-06",
+  "currency": "GBP",
+  "net_total": "218.88",
+  "vat_total": "0.00",
+  "gross_total": "218.88",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-70",
+  "bank_account_number": "00004050",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "5000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

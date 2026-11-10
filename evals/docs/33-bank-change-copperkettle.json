@@ -1,0 +1,29 @@
+{
+ "file": "33-bank-change-copperkettle.pdf",
+ "fictional": true,
+ "layout": "L2",
+ "medium": "text_pdf",
+ "scenario": "bank_change",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Copperkettle Dairy (Demo) Ltd",
+  "supplier_vat_number": "GB 748 5260 57",
+  "document_number": "CKD-4616",
+  "issue_date": "2026-10-20",
+  "due_date": "2026-11-19",
+  "currency": "GBP",
+  "net_total": "378.30",
+  "vat_total": "0.00",
+  "gross_total": "378.30",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-96",
+  "bank_account_number": "00002311",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "5000",
+ "expected_flags": [
+  "bank_details_changed"
+ ],
+ "expected_route": "review"
+}

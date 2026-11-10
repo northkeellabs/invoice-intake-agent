@@ -1,0 +1,27 @@
+{
+ "file": "cal-09-scan.jpg",
+ "fictional": true,
+ "layout": "L3",
+ "medium": "scan_jpg",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Birchwood Repairs (Demo)",
+  "supplier_vat_number": "GB 132 4124 15",
+  "document_number": "BWR-3680",
+  "issue_date": "2026-10-02",
+  "due_date": "2026-10-16",
+  "currency": "GBP",
+  "net_total": "360.00",
+  "vat_total": "72.00",
+  "gross_total": "432.00",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-94",
+  "bank_account_number": "00008732",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "6200",
+ "expected_flags": [],
+ "expected_route": "auto"
+}
