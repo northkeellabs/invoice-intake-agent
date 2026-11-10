@@ -1,0 +1,29 @@
+{
+ "file": "29-duplicate-tidewater.jpg",
+ "fictional": true,
+ "layout": "L3",
+ "medium": "scan_jpg",
+ "scenario": "duplicate",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Tidewater Packaging (Demo) Ltd",
+  "supplier_vat_number": "GB 442 3232 21",
+  "document_number": "TWP-3299",
+  "issue_date": "2026-11-05",
+  "due_date": "2026-12-05",
+  "currency": "GBP",
+  "net_total": "388.46",
+  "vat_total": "77.69",
+  "gross_total": "466.15",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-78",
+  "bank_account_number": "00004504",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "5100",
+ "expected_flags": [
+  "duplicate"
+ ],
+ "expected_route": "review"
+}

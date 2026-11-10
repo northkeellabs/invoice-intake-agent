@@ -1,0 +1,27 @@
+{
+ "file": "11-invoice-orchardline.pdf",
+ "fictional": true,
+ "layout": "L7",
+ "medium": "text_pdf",
+ "scenario": "clean",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Orchardline Fruit (Demo)",
+  "supplier_vat_number": "GB 266 4737 82",
+  "document_number": "OLF-4546",
+  "issue_date": "2026-09-28",
+  "due_date": "2026-10-12",
+  "currency": "GBP",
+  "net_total": "167.11",
+  "vat_total": "0.00",
+  "gross_total": "167.11",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-74",
+  "bank_account_number": "00009643",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "5000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

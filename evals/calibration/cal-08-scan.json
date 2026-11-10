@@ -1,0 +1,27 @@
+{
+ "file": "cal-08-scan.pdf",
+ "fictional": true,
+ "layout": "L4",
+ "medium": "scan_pdf",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Coldharbour Packaging (Demo) Ltd",
+  "supplier_vat_number": "GB 937 8785 70",
+  "document_number": "CHP-1420",
+  "issue_date": "2026-10-04",
+  "due_date": "2026-11-03",
+  "currency": "GBP",
+  "net_total": "189.48",
+  "vat_total": "37.90",
+  "gross_total": "227.38",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-14",
+  "bank_account_number": "00003773",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "5100",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

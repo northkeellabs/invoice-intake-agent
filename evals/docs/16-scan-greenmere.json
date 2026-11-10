@@ -1,0 +1,27 @@
+{
+ "file": "16-scan-greenmere.pdf",
+ "fictional": true,
+ "layout": "L3",
+ "medium": "scan_pdf",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Greenmere Hygiene (Demo) Ltd",
+  "supplier_vat_number": "GB 577 4637 06",
+  "document_number": "GMH-7709",
+  "issue_date": "2026-11-03",
+  "due_date": "2026-11-17",
+  "currency": "GBP",
+  "net_total": "152.45",
+  "vat_total": "30.49",
+  "gross_total": "182.94",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-94",
+  "bank_account_number": "00005241",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "6300",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

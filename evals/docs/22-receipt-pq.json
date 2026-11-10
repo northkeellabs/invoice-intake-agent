@@ -1,0 +1,27 @@
+{
+ "file": "22-receipt-pq.png",
+ "fictional": true,
+ "layout": "receipt",
+ "medium": "receipt_image",
+ "scenario": "receipt",
+ "expected_type": "receipt",
+ "expected_fields": {
+  "supplier_name": "Paper & Quill (Demo)",
+  "supplier_vat_number": "GB 859 0306 51",
+  "document_number": "PQ3286",
+  "issue_date": "2026-09-25",
+  "due_date": null,
+  "currency": "GBP",
+  "net_total": "21.82",
+  "vat_total": "4.37",
+  "gross_total": "26.19",
+  "original_invoice_number": null,
+  "bank_sort_code": null,
+  "bank_account_number": null,
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "7000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

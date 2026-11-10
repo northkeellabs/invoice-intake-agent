@@ -1,0 +1,27 @@
+{
+ "file": "cal-10-scan.jpg",
+ "fictional": true,
+ "layout": "L5",
+ "medium": "scan_jpg",
+ "scenario": "scan",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Thistle Print (Demo)",
+  "supplier_vat_number": "GB 807 8486 31",
+  "document_number": "TPR-2769",
+  "issue_date": "2026-10-20",
+  "due_date": "2026-11-19",
+  "currency": "GBP",
+  "net_total": "132.69",
+  "vat_total": "26.54",
+  "gross_total": "159.23",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-57",
+  "bank_account_number": "00002109",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "6800",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

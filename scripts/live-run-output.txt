@@ -1,0 +1,66 @@
+======================================================================
+run_id: harbour-lane-baker-261110-d6350
+status: pending_approval
+batch: harbour-lane-baker-261110-d6350
+client: Harbour Lane Bakery (Demo)
+crm: client record found (company); the batch note goes on it
+documents:
+  - harbour-lane-baker-261110-d6350-001 01-invoice-orchardline.pdf: invoice [auto_eligible] Orchardline Fruit (Demo) OLF-4546 GBP 123.6 code=5000 (llm) conf=1.0
+  - harbour-lane-baker-261110-d6350-002 02-scan-orchardline.jpg: invoice [auto_eligible] Orchardline Fruit (Demo) OLF-4567 GBP 123.67 code=5000 (llm) conf=0.9934
+  - harbour-lane-baker-261110-d6350-003 03-invoice-larkspur.pdf: invoice [auto_eligible] Larkspur Software (Demo) Ltd LSW-1224 GBP 100.14 code=6500 (llm) conf=1.0
+  - harbour-lane-baker-261110-d6350-004 04-receipt-paper-quill.jpg: receipt [auto_eligible] PAPER & QUILL (DEMO) PQ3286 GBP 26.63 code=5100 (llm) conf=0.9852
+  - harbour-lane-baker-261110-d6350-005 05-statement-orchardline.pdf: statement [review] Orchardline Fruit (Demo) code=None (none) conf=0.0
+      ! not_a_bill: supplier statement: used for reconciliation, never exported as a bill
+statement harbour-lane-baker-261110-d6350-005 (Orchardline Fruit (Demo)): matched 2, missing 1, amount mismatch 0
+      missing: OLF-4597 2026-10-22 108.48
+plan: approve 4 auto-eligible document(s), export 4 bill(s), missing documents 1
+  - action=add_note, contact_id=4137324524693269661864526301217
+      | Document intake batch harbour-lane-baker-261110-d6350 for Harbour Lane Bakery (Demo) (invoice-intake-agent, logged after human approval).
+      | Documents received: 5. Bills approved and exported: 4. In review queue: 1. Rejected: 0. Invalid files: 0. Statements: 1. Other documents: 0.
+      | Exceptions: possible duplicates 0; bank-detail changes 0 (confirm by phone before paying); documents with failed checks 0; instructions found in documents 0; missing documents from statements 1.
+      | Missing: Orchardline Fruit (Demo) OLF-4597
+      | Chasers drafted: 1 (draft only, not sent).
+      | Nothing was paid, emailed or written to an accounting system by the agent.
+  - action=create_task, contact_id=4137324524693269661864526301217, name=Chase 1 missing documents, due_date=2026-11-13, description=Ask Harbour Lane Bakery (Demo) for: Orchardline Fruit (Demo) OLF-4597. Chaser draft (not sent): out/harbour-lane-baker-261110-d6350/chaser-to-client.txt
+timings (s): ingest=28.281, reconcile=0.002, lookup=2.177, plan=0.002
+pending: review documents at http://127.0.0.1:8090/review, then `intake approve harbour-lane-baker-261110-d6350 --decision approve|reject`
+----------------------------------------------------------------------
+review edit (approved by the human reviewer in this session): 04-receipt-paper-quill.jpg account code 5100 -> 7000 (source human, edits recorded: 1)
+----------------------------------------------------------------------
+run_id: harbour-lane-baker-261110-d6350
+status: executed
+batch: harbour-lane-baker-261110-d6350
+client: Harbour Lane Bakery (Demo)
+crm: client record found (company); the batch note goes on it
+documents:
+  - harbour-lane-baker-261110-d6350-001 01-invoice-orchardline.pdf: invoice [approved] Orchardline Fruit (Demo) OLF-4546 GBP 123.6 code=5000 (llm) conf=1.0
+  - harbour-lane-baker-261110-d6350-002 02-scan-orchardline.jpg: invoice [approved] Orchardline Fruit (Demo) OLF-4567 GBP 123.67 code=5000 (llm) conf=0.9934
+  - harbour-lane-baker-261110-d6350-003 03-invoice-larkspur.pdf: invoice [approved] Larkspur Software (Demo) Ltd LSW-1224 GBP 100.14 code=6500 (llm) conf=1.0
+  - harbour-lane-baker-261110-d6350-004 04-receipt-paper-quill.jpg: receipt [approved] PAPER & QUILL (DEMO) PQ3286 GBP 26.63 code=7000 (human) conf=0.9852
+  - harbour-lane-baker-261110-d6350-005 05-statement-orchardline.pdf: statement [review] Orchardline Fruit (Demo) code=None (none) conf=0.0
+      ! not_a_bill: supplier statement: used for reconciliation, never exported as a bill
+statement harbour-lane-baker-261110-d6350-005 (Orchardline Fruit (Demo)): matched 2, missing 1, amount mismatch 0
+      missing: OLF-4597 2026-10-22 108.48
+plan: approve 4 auto-eligible document(s), export 4 bill(s), missing documents 1
+  - action=add_note, contact_id=4137324524693269661864526301217
+      | Document intake batch harbour-lane-baker-261110-d6350 for Harbour Lane Bakery (Demo) (invoice-intake-agent, logged after human approval).
+      | Documents received: 5. Bills approved and exported: 4. In review queue: 1. Rejected: 0. Invalid files: 0. Statements: 1. Other documents: 0.
+      | Exceptions: possible duplicates 0; bank-detail changes 0 (confirm by phone before paying); documents with failed checks 0; instructions found in documents 0; missing documents from statements 1.
+      | Missing: Orchardline Fruit (Demo) OLF-4597
+      | Chasers drafted: 1 (draft only, not sent).
+      | Nothing was paid, emailed or written to an accounting system by the agent.
+  - action=create_task, contact_id=4137324524693269661864526301217, name=Chase 1 missing documents, due_date=2026-11-13, description=Ask Harbour Lane Bakery (Demo) for: Orchardline Fruit (Demo) OLF-4597. Chaser draft (not sent): out/harbour-lane-baker-261110-d6350/chaser-to-client.txt
+execution:
+  - {'action': 'add_note', 'ok': True, 'note_id': '4137426434600207684755992475425'}
+  - {'action': 'create_task', 'ok': True, 'task_id': '4137426435806163578574754493533'}
+outputs: bills_csv=out\harbour-lane-baker-261110-d6350\bills-xero.csv, json=out\harbour-lane-baker-261110-d6350\bills.json, rows=9, rules_created=3, exceptions=out\harbour-lane-baker-261110-d6350\exceptions.md, chasers=['chaser-to-client.txt']
+timings (s): ingest=28.281, reconcile=0.002, lookup=2.177, plan=0.002, execute=2.723, report=0.002
+----------------------------------------------------------------------
+Independent verification (read-only LACRM connector, 2026-11-10):
+  client record 4137324524693269661864526301217 "Harbour Lane Bakery (Demo)" (a company record; notes and tasks can be attached to it, so Maya Demo was not needed)
+  notes on the record: 1, was 0 before the run; note 4137426434600207684755992475425, text matches the plan
+  tasks on the record: 1, was 0 before the run; task 4137426435806163578574754493533 "Chase 1 missing documents", due 2026-11-13
+  Maya Demo and Tom Demo (people at the company) unchanged; no contact created; no pipeline touched
+  An earlier attempt at this live batch was rejected before execution (zero CRM writes), because its batch id contained an
+  8-digit date that the redactor masked; the id format was fixed and the batch re-run.
+All companies, people, documents and bank details above are fictional.

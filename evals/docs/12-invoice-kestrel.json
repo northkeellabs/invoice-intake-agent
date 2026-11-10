@@ -1,0 +1,27 @@
+{
+ "file": "12-invoice-kestrel.pdf",
+ "fictional": true,
+ "layout": "L4",
+ "medium": "text_pdf",
+ "scenario": "clean",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Kestrel Office Supplies (Demo) Ltd",
+  "supplier_vat_number": "GB 230 9721 51",
+  "document_number": "KOS-6809",
+  "issue_date": "2026-10-19",
+  "due_date": "2026-11-18",
+  "currency": "GBP",
+  "net_total": "116.96",
+  "vat_total": "23.40",
+  "gross_total": "140.36",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-39",
+  "bank_account_number": "00005411",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "7000",
+ "expected_flags": [],
+ "expected_route": "auto"
+}

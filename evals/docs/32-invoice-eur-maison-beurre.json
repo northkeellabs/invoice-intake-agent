@@ -1,0 +1,29 @@
+{
+ "file": "32-invoice-eur-maison-beurre.pdf",
+ "fictional": true,
+ "layout": "EUR",
+ "medium": "text_pdf",
+ "scenario": "eur",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Maison Beurre (Demo) SARL",
+  "supplier_vat_number": null,
+  "document_number": "MB-7883",
+  "issue_date": "2026-10-27",
+  "due_date": "2026-11-10",
+  "currency": "EUR",
+  "net_total": "1500.99",
+  "vat_total": "0.00",
+  "gross_total": "1500.99",
+  "original_invoice_number": null,
+  "bank_sort_code": null,
+  "bank_account_number": null,
+  "bank_iban": "FR00 DEMO 0000 0000 0000 0000 000",
+  "line_count": 2
+ },
+ "expected_account_code": "5000",
+ "expected_flags": [
+  "foreign_currency"
+ ],
+ "expected_route": "review"
+}

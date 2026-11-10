@@ -1,0 +1,29 @@
+# Example chart of accounts for a small food business. EXAMPLE ONLY: edit to match your chart.
+# It is not the default chart of any accounting product. Codes must match the codes in your
+# accounting system exactly, because they are written to the AccountCode column of the export.
+accounts:
+  - {code: "5000", name: "Ingredients and food purchases", hint: "flour, dairy, eggs, butter, sugar, fruit, chocolate, yeast"}
+  - {code: "5100", name: "Packaging", hint: "boxes, bags, labels, cups, wrapping"}
+  - {code: "6000", name: "Rent and rates", hint: "shop or unit rent, business rates, service charge"}
+  - {code: "6100", name: "Utilities", hint: "electricity, gas, water"}
+  - {code: "6200", name: "Repairs and maintenance", hint: "oven servicing, equipment repairs, plumbing, call-out"}
+  - {code: "6300", name: "Cleaning and hygiene", hint: "cleaning materials, hygiene services, waste collection, pest control"}
+  - {code: "6400", name: "Telephone and internet", hint: "phone line, broadband, mobile"}
+  - {code: "6500", name: "Software and subscriptions", hint: "till system, accounting software, online services"}
+  - {code: "6600", name: "Accountancy and professional fees", hint: "bookkeeping, accountant, legal"}
+  - {code: "6700", name: "Insurance", hint: "business insurance, public liability"}
+  - {code: "6800", name: "Marketing and printing", hint: "flyers, menus, signage, advertising"}
+  - {code: "6900", name: "Travel and motor", hint: "fuel, parking, van hire, train"}
+  - {code: "7000", name: "Office and stationery", hint: "paper, pens, printer ink, postage"}
+  - {code: "7100", name: "Small equipment", hint: "utensils, trays, scales, small kitchen tools"}
+  - {code: "7200", name: "Bank and card fees", hint: "card terminal fees, bank charges"}
+  - {code: "7300", name: "Delivery and courier", hint: "courier, delivery charges"}
+  - {code: "7900", name: "General expenses", hint: "anything that fits no other account"}
+
+# Xero TaxType column: Xero wants "the purchases tax rate display name as it appears in Xero".
+# EXAMPLE names only: copy the exact display names from your own Xero organisation.
+tax_types:
+  "20": "20% (VAT on Expenses)"
+  "5": "5% (VAT on Expenses)"
+  "0": "Zero Rated Expenses"
+  "none": "No VAT"

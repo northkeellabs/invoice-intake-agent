@@ -1,0 +1,30 @@
+{
+ "file": "26-statement-brackenfold.pdf",
+ "fictional": true,
+ "layout": "statement",
+ "medium": "text_pdf",
+ "scenario": "statement",
+ "expected_type": "statement",
+ "expected_flags": [
+  "not_a_bill"
+ ],
+ "expected_route": "review",
+ "supplier_name": "Brackenfold Mills (Demo) Ltd",
+ "statement_lines": [
+  {
+   "document_number": "BFM-5473",
+   "amount": "238.42"
+  },
+  {
+   "document_number": "BFM-5438",
+   "amount": "249.14"
+  },
+  {
+   "document_number": "BFM-5445",
+   "amount": "218.88"
+  }
+ ],
+ "missing_documents": [
+  "BFM-5473"
+ ]
+}

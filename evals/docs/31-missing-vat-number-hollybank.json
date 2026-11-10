@@ -1,0 +1,29 @@
+{
+ "file": "31-missing-vat-number-hollybank.pdf",
+ "fictional": true,
+ "layout": "L5",
+ "medium": "text_pdf",
+ "scenario": "missing_vat_field",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Hollybank Properties (Demo) Ltd",
+  "supplier_vat_number": null,
+  "document_number": "HBP-1981",
+  "issue_date": "2026-10-04",
+  "due_date": "2026-10-18",
+  "currency": "GBP",
+  "net_total": "1610.20",
+  "vat_total": "322.04",
+  "gross_total": "1932.24",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-23",
+  "bank_account_number": "00006332",
+  "bank_iban": null,
+  "line_count": 2
+ },
+ "expected_account_code": "6000",
+ "expected_flags": [
+  "vat_invoice_incomplete"
+ ],
+ "expected_route": "review"
+}

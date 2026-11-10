@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}{{ d.file_name }}{% endblock %}
+{% block body %}
+<p><a href="/review?batch={{ d.batch_id }}">&larr; back to {{ d.batch_id }}</a></p>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<h2 style="margin:4px 0 12px">{{ d.file_name }} <span class="pill st-{{ d.status }}">{{ d.status }}</span>
+  <span class="muted small">{{ d.doc_type or "unknown type" }}, route {{ d.route }}, confidence {{ "%.2f"|format(d.confidence) if d.confidence is not none else "-" }}</span></h2>
+<div class="cols">
+  <div class="page">
+    {% for n in range(1, (d.pages or 1) + 1) %}<img src="/review/{{ d.id }}/page/{{ n }}.png" alt="page {{ n }}">{% endfor %}
+    <p class="muted small">Text source per page: {% for o in d.ocr or [] %}page {{ o.page }} {{ o.source }} ({{ "%.2f"|format(o.confidence) }}){% if not loop.last %}, {% endif %}{% endfor %}</p>
+  </div>
+  <div>
+    <div class="card">
+      <b>Checks</b>
+      {% for f in d.flags or [] %}
+        <div class="flag {% if f.name in ['bank_details_changed', 'instructions_found', 'duplicate', 'arithmetic_total'] %}bad{% endif %}"><b>{{ f.title }}</b>{{ f.reason }}</div>
+      {% else %}<p class="muted">No flags. All checks passed.</p>{% endfor %}
+    </div>
+    <form class="card" method="post" action="/review/{{ d.id }}">
+      <input type="hidden" name="token" value="{{ token }}">
+      {% if d.doc_type in bill_types %}
+        <b>Extracted fields</b> <span class="muted small">(edits are recorded before/after)</span>
+        {% for f in editable %}
+          <label for="{{ f }}">{{ f.replace("_", " ") }}{% if grounding.get(f) == "not_found" %} - not found in the document{% elif grounding.get(f) == "computed" %} - computed{% endif %}</label>
+          <input type="text" id="{{ f }}" name="{{ f }}" value="{{ ex.get(f) if ex.get(f) is not none else '' }}" class="{% if grounding.get(f) == 'not_found' %}nf{% endif %}">
+        {% endfor %}
+        <label>bank details</label>
+        <div>{% if d.bank_last4 %}account ending {{ d.bank_last4 }}{% else %}<span class="muted">none shown</span>{% endif %}
+          {% if rule and rule.bank_last4 %}<span class="muted small"> (supplier record: account ending {{ rule.bank_last4 }}; never changed by the agent)</span>{% endif %}</div>
+        <label for="account_code">account code {% if d.account_source %}<span class="muted">(from {{ d.account_source }})</span>{% endif %}</label>
+        <select id="account_code" name="account_code">
+          <option value="">choose</option>
+          {% for code, a in accounts.items() %}<option value="{{ code }}" {% if code == d.account_code %}selected{% endif %}>{{ code }} {{ a.name }}</option>{% endfor %}
+        </select>
+        {% if ex.line_items %}
+        <table style="margin-top:10px" class="small">
+          <tr><th>line</th><th>qty</th><th>unit</th><th>net</th><th>VAT %</th></tr>
+          {% for li in ex.line_items %}<tr><td>{{ li.description }}</td><td>{{ li.quantity }}</td><td>{{ li.unit_price }}</td><td>{{ li.net_amount }}</td><td>{{ li.vat_rate }}</td></tr>{% endfor %}
+        </table>{% endif %}
+      {% elif d.doc_type == "statement" %}
+        <b>Statement</b> <span class="muted small">(used for reconciliation; never exported as a bill)</span>
+        <p>{{ st.supplier_name }}, dated {{ st.statement_date }}</p>
+        <table class="small"><tr><th>document</th><th>date</th><th>amount</th></tr>
+          {% for l in st.lines or [] %}<tr><td>{{ l.document_number }}</td><td>{{ l.date }}</td><td>{{ l.amount }}</td></tr>{% endfor %}
+        </table>
+      {% else %}
+        <p class="muted">Not an invoice, receipt or credit note. It cannot be exported as a bill.</p>
+      {% endif %}
+      <label for="reason">reason (required to reject)</label>
+      <input type="text" id="reason" name="reason" value="{{ d.reject_reason or '' }}">
+      <div class="btns">
+        {% if d.doc_type in bill_types %}<button class="primary" name="action" value="approve">Approve</button>
+        <button name="action" value="save">Save edits</button>{% endif %}
+        <button class="danger" name="action" value="reject">Reject</button>
+      </div>
+    </form>
+    {% if edits %}<div class="card small"><b>Edit history</b>
+      {% for e in edits %}<div>{{ e.ts }}: {{ e.field }} {{ e.before }} &rarr; {{ e.after }}</div>{% endfor %}</div>{% endif %}
+  </div>
+</div>
+{% endblock %}

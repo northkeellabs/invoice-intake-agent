@@ -1,0 +1,29 @@
+{
+ "file": "30-arithmetic-error-northgate.pdf",
+ "fictional": true,
+ "layout": "L1",
+ "medium": "text_pdf",
+ "scenario": "arithmetic_error",
+ "expected_type": "invoice",
+ "expected_fields": {
+  "supplier_name": "Northgate Oven Services (Demo)",
+  "supplier_vat_number": "GB 308 0230 02",
+  "document_number": "NOS-3345",
+  "issue_date": "2026-09-20",
+  "due_date": "2026-10-20",
+  "currency": "GBP",
+  "net_total": "364.45",
+  "vat_total": "72.89",
+  "gross_total": "447.34",
+  "original_invoice_number": null,
+  "bank_sort_code": "00-00-98",
+  "bank_account_number": "00007017",
+  "bank_iban": null,
+  "line_count": 3
+ },
+ "expected_account_code": "6200",
+ "expected_flags": [
+  "arithmetic_total"
+ ],
+ "expected_route": "review"
+}

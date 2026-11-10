@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+<form class="filters" method="get" action="/review">
+  <select name="batch" onchange="this.form.submit()">
+    <option value="">all batches</option>
+    {% for b in batches %}<option value="{{ b }}" {% if b == batch %}selected{% endif %}>{{ b }}</option>{% endfor %}
+  </select>
+  <select name="status" onchange="this.form.submit()">
+    <option value="">all statuses</option>
+    {% for s in ["review", "auto_eligible", "approved", "rejected", "invalid"] %}
+    <option value="{{ s }}" {% if s == status %}selected{% endif %}>{{ s }}</option>{% endfor %}
+  </select>
+  <noscript><button type="submit">Filter</button></noscript>
+  <span class="muted">{{ docs|length }} document(s)</span>
+</form>
+<table>
+  <tr><th>document</th><th>type</th><th>supplier</th><th>number</th><th>total</th><th>account</th><th>status</th><th>flags</th><th>confidence</th></tr>
+  {% for d in docs %}{% set ex = d.extraction or {} %}{% set st = d.statement or {} %}
+  <tr>
+    <td><a href="/review/{{ d.id }}">{{ d.file_name }}</a><div class="muted small">{{ d.id }}</div></td>
+    <td>{{ d.doc_type or "-" }}</td>
+    <td>{{ ex.supplier_name or st.supplier_name or "-" }}</td>
+    <td>{{ ex.document_number or "-" }}</td>
+    <td>{% if ex.get("gross_total") is not none %}{{ ex.get("currency") or "" }} {{ "%.2f"|format(ex.get("gross_total")) }}{% else %}-{% endif %}</td>
+    <td>{{ d.account_code or "-" }}{% if d.account_source %} <span class="muted small">({{ d.account_source }})</span>{% endif %}</td>
+    <td><span class="pill st-{{ d.status }}">{{ d.status }}</span></td>
+    <td class="small">{% for f in d.flags or [] %}{{ f.title }}{% if not loop.last %}; {% endif %}{% else %}<span class="muted">none</span>{% endfor %}</td>
+    <td>{{ "%.2f"|format(d.confidence) if d.confidence is not none else "-" }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
